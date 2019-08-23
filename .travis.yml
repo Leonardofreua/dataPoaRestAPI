@@ -1,0 +1,20 @@
+language: java
+
+install: true
+
+services:
+  - mongodb
+
+jdk:
+  - openjdk8
+
+os:
+  - linux
+
+script: 
+  - mvn test
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+cache:
+  directories:
+    - $HOME/.m2
