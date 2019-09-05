@@ -49,7 +49,7 @@ public class LinhaOnibusController {
         return service.findByNome(nomeLinha);
     }
 
-    @GetMapping("/linhas/list")
+    @GetMapping({"/", "/linhas/list"})
     public List<LinhaOnibus> findAll() {
         return service.findAll();
     }
