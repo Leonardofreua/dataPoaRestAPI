@@ -24,9 +24,8 @@ public class LinhaOnibus {
     private static final long serialVersionUID = 1L;
 
     @Id
+    private String idLinha;
     private String id;
     private String codigo;
     private String nome;
-    @DBRef
-    private List<Itinerario> itinerarios;
 }

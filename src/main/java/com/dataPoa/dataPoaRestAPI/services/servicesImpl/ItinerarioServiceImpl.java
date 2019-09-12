@@ -57,7 +57,7 @@ public class ItinerarioServiceImpl implements ItinerarioService {
                 return extractValueToList(content.toString());
             }
         } catch (IOException | JSONException e) {
-            throw new JSONException(e.getMessage() + "Linha não encontrada");
+            throw new JSONException("Linha não encontrada");
         }
         conn.disconnect();
         return new ArrayList<>();
